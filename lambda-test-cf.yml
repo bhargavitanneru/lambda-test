@@ -14,4 +14,4 @@ Resources:
       Code:
         ZipFile: |
           exports.handler = async (event) => {console.log(event);return 'Hello from Lambda!';};
-      Role: arn:aws:iam::063031425366:role/LambdaRole
+      Role: arn:aws:iam::063031425366:role/LambdaTest
