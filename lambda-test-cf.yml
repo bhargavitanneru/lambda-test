@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Template for Lambda Deploy"
+
+Resources:
+  TestLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: "dynamic-shard-macro-processor"
+      Description: "create dynamic number of shards"
+      Handler: index.handler
+      Runtime: nodejs12.x
+      MemorySize: 512
+      Timeout: 120
+      Code:
+        ZipFile: |
+          exports.handler = function (event, context) {
+	          context.succeed('hello world');
+          };
