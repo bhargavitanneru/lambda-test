@@ -5,10 +5,10 @@ Resources:
   TestLambda:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: "dynamic-shard-macro-processor"
-      Description: "create dynamic number of shards"
+      FunctionName: "lambda-test"
+      Description: "testing lambda"
       Handler: index.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       MemorySize: 512
       Timeout: 120
       Code:
