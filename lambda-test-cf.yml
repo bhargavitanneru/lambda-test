@@ -13,6 +13,5 @@ Resources:
       Timeout: 120
       Code:
         ZipFile: |
-          exports.handler = function (event, context) {
-	  context.succeed('hello world');
+          exports.handler = function (event, context) { context.succeed('hello world');
           };
