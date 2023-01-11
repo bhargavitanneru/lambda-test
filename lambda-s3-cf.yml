@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Template for Lambda Deploy"
+
+Resources:
+  TestLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: "lambda-test"
+      Description: "testing lambda"
+      Handler: index.handler
+      Runtime: nodejs18.x
+      MemorySize: 512
+      Timeout: 120
+      Code:
+        S3Bucket: codepipeline-us-east-2-544458937886
+        S3Key: TestLambda/SourceArti/Zohmav5
+      Role: arn:aws:iam::121511844673:role/offline_lambda_role
+      Layers:
+        - 'arn:aws:lambda:us-east-2:121511844673:layer:mongodb:3'
