@@ -5,7 +5,7 @@ Resources:
   TestLambda:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: "lambda-test"
+      FunctionName: "lambda-test-s3"
       Description: "testing lambda"
       Handler: index.handler
       Runtime: nodejs18.x
