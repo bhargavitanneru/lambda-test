@@ -13,7 +13,8 @@ Resources:
       Timeout: 120
       Code:
         ZipFile: |
-          exports.handler = async (event) => {console.log(event);return 'Hello from Lambda!';};
+          import { MongoClient } from "mongodb";
+          exports.handler = async (event) => {console.log(event);return `Hello from Lambda! ${new MongoClient()}`;};
       Role: arn:aws:iam::121511844673:role/offline_lambda_role
       Layers:
         - 'arn:aws:lambda:us-east-2:121511844673:layer:mongodb:3'
