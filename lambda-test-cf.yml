@@ -6,7 +6,7 @@ Resources:
     Type: AWS::Lambda::LayerVersion
     Properties:
       CompatibleRunTimes:
-        - nodejs16.x
+        - nodejs16.16.0
       LayerName: arn:aws:lambda:us-east-2:121511844673:layer:mongodb:3
   TestLambda:
     Type: AWS::Lambda::Function
