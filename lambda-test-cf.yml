@@ -12,7 +12,7 @@ Resources:
       MemorySize: 512
       Timeout: 120
       Code:
-        Zip: |
+        ZipFile: |
           const { MongoClient } = require("mongodb");
 
           exports.handler = async (event) => {
