@@ -13,7 +13,7 @@ Resources:
       Timeout: 120
       Code:
         S3Bucket: codepipeline-us-east-2-544458937886
-        S3Key: TestLambda/SourceArti/ZCwI69r
+        S3Key: TestLambda/SourceArti
       Role: arn:aws:iam::121511844673:role/offline_lambda_role
       Layers:
         - 'arn:aws:lambda:us-east-2:121511844673:layer:mongodb:3'
