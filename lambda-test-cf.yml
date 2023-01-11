@@ -2,6 +2,12 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: "Template for Lambda Deploy"
 
 Resources:
+  TestLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      CompatibleRunTimes:
+        - nodejs16.x
+      LayerName: arn:aws:lambda:us-east-2:121511844673:layer:mongodb:3
   TestLambda:
     Type: AWS::Lambda::Function
     Properties:
@@ -15,3 +21,5 @@ Resources:
         ZipFile: |
           exports.handler = async (event) => {console.log(event);return 'Hello from Lambda!';};
       Role: arn:aws:iam::121511844673:role/offline_lambda_role
+      Layers:
+        - !Ref TestLayer
